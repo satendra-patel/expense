@@ -1,12 +1,22 @@
 import React from 'react'
+import './ExpenseItem.css'
 
 export default function ExpenseItem() {
+    const expenseDate=new Date(2023, 3, 21)
+    const expenseTitle='car insurance';
+    const expenseAmount='234';
+    const LocationOfExpenditure='lakhanpur'
   return (
-    <div>
-        <div>Expense Items</div>
-        <p>Food Rs 10</p>
-        <p>Petrol Rs 100</p>
-        <p>Movies Rs 200</p>
+    <div className='expense-item'>
+        <div>{expenseDate.toDateString()}</div>
+        <div className='expense-item__description'>
+            <h2>{expenseTitle}</h2>
+            <div className='expense-item__price'>
+                ${expenseAmount}
+            </div>
+            <div>{LocationOfExpenditure}</div>
+
+        </div>
     </div>
   )
 }
