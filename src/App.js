@@ -41,9 +41,13 @@ function App() {
     },
   ];
 
+  const saveExpenseHandler=(expense)=>{
+    console.log(expense);
+  }
+
   return (
     <div>
-      <Newexpense />
+      <Newexpense onNewexpense={saveExpenseHandler} />
       <Expenses expenses={expenses} />
     </div>
   );
